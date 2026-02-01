@@ -1,50 +1,45 @@
 ---
 title: 环境可靠性检测技术标准库
-description: 专注于军工、科研及军民融合领域的环境试验技术沉淀与数字化管理。
+description: 专注于环境试验技术标准的解读与数字化管理。
 template: splash
 hero:
-  tagline: 严谨、科学、数字化的检测技术总部。涵盖 GJB、MIL-STD 标准解读及 ERPNext 实验室数字化实施指南。
+  tagline: 严谨、科学、数字化的检测技术总部。涵盖各类环境试验标准解读及原文查询。
   image:
-    # 建议之后找一个带科技感的图标或公司 Logo 替换掉 houston
     file: ../../assets/unnamed.webp 
   actions:
-    - text: 进入标准库
-      link: /guides/example/
+    - text: 开始标准解读
+      link: /标准解读/旭博认证cnas标准解读
       icon: right-arrow
-    - text: 查看检测流程
-      link: https://blog.ntbln.com
-      icon: external
+    - text: 查阅标准原文
+      link: /标准原文/标准原文
+      icon: magnifier
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 核心技术板块
+## 核心资源
 
 <CardGrid stagger>
-    <Card title="环境可靠性标准" icon="document">
-        深度解析 **GJB 150A**、**MIL-STD-810** 等国内外主流环境试验标准，提供试验条件选定建议。
+    <Card title="检测标准解读" icon="open-book">
+        按行业领域（军工、轨交、汽车等）分类解读认可的检测能力范围标准，帮助您快速定位适用标准。
+        [点击阅读指南](/标准解读/旭博认证CNAS标准解读)
     </Card>
-    <Card title="实验室数字化 (LIMS)" icon="setting">
-        基于 **ERPNext** 构建的实验室管理体系：从样品接收、试验任务下达到报告生成的全流程自动化。
-    </Card>
-    <Card title="行业合规与准入" icon="approve-check-circle">
-        针对保密军工单位、科研院所的供应商准入流程指引及环境可靠性检测资质要求。
-    </Card>
-    <Card title="精密贸易物资" icon="list-format">
-        日韩塑料粒子等进口物资的理化指标检测标准与国际贸易质量验收指南。
+    <Card title="标准原文列表" icon="document">
+        收录了 99 个认可的检测能力标准原文代码与详细描述，支持快速检索。
+        [查看完整列表](/标准原文/标准原文)
     </Card>
 </CardGrid>
 
----
-
-## 快速查阅
+## 其他资源
 
 <CardGrid>
-    <Card title="会计与成本控制" icon="information">
-        检测服务定价模型与苏州当地会计准则在检测行业的应用实践。
+    <Card title="示例指南" icon="information">
+        查看编写指南的示例文件。
+        [阅读示例](/guides/example)
     </Card>
-    <Card title="技术社区" icon="open-book">
-        沉淀检测过程中的疑难杂症，分享电磁振动、高低温冲击等试验的实操心得。
+    <Card title="参考示例" icon="list-format">
+        查看参考文档的示例结构。
+        [阅读示例](/reference/example)
     </Card>
 </CardGrid>
