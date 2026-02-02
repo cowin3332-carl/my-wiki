@@ -2,7 +2,10 @@ name: Build and Push Starlight Image
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    tags:
+      - 'v*'
 
 env:
   REGISTRY: ghcr.io
@@ -19,6 +22,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # --- 💡 标注：这是新增的元数据提取步骤 ---
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          # 这里定义了三种标签策略：
+          # 1. 对应 Git 的 Commit SHA (如 sha-a1b2c3d)
+          # 2. 如果是 main 分支，标记为 latest
+          # 3. 自动生成日期版本 (如 20260202-1345)
+          tags: |
+            type=sha,format=short
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=schedule,pattern={{date 'YYYYMMDD-HHmmss'}}
+      # ---------------------------------------
+
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -31,4 +50,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          # --- 💡 标注：修改这里，直接引用 meta 步骤生成的 tags ---
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # ---------------------------------------------------
