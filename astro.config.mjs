@@ -10,6 +10,9 @@ export default defineConfig({
 			customCss: [
         './src/styles/custom.css',
       ],
+      components: {
+        SocialIcons: './src/components/SocialIcons.astro',
+      },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cowin3332-carl/my-wiki.git' }],
 			sidebar: [
 				{

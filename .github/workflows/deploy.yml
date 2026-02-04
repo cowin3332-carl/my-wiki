@@ -33,9 +33,9 @@ jobs:
           # 2. 如果是 main 分支，标记为 latest
           # 3. 自动生成日期版本 (如 20260202-1345)
           tags: |
-            type=sha,format=short
+            type=raw,value=1.0.${{ github.run_number }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
-            type=schedule,pattern={{date 'YYYYMMDD-HHmmss'}}
+            type=sha,format=short
       # ---------------------------------------
 
       - name: Log in to GHCR

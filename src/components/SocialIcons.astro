@@ -1,0 +1,100 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+---
+
+<div class="social-icons-wrapper">
+  <Default {...Astro.props} />
+  
+  <div class="wechat-contact">
+    <button class="wechat-trigger" aria-label="微信联系">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M8.22 2.974c-4.538 0-8.22 3.35-8.22 7.481 0 2.314 1.154 4.383 2.949 5.768l-.754 2.247 2.615-1.307c.451.104.918.163 1.41.163 4.538 0 8.22-3.35 8.22-7.48 0-4.132-3.682-7.482-8.22-7.482zm4.11 5.61a.934.934 0 1 1 0-1.868.934.934 0 0 1 0 1.868zm-3.363 0a.934.934 0 1 1 0-1.868.934.934 0 0 1 0 1.868zm11.583 3.364c-.378 0-.74.037-1.096.104.533.86.837 1.86.837 2.934 0 3.097-2.76 5.61-6.165 5.61-.363 0-.711-.03-1.052-.089l-1.961.98.565-1.685c-1.346-1.039-2.212-2.59-2.212-4.324 0-.148.01-.296.03-.437-.023 0-.044.007-.067.007-4.152 0-7.518 3.07-7.518 6.857 0 2.124 1.057 4.022 2.701 5.293l-.691 2.062 2.396-1.198c.413.096.84.15 1.291.15 4.152 0 7.518-3.071 7.518-6.858 0-.104-.007-.214-.015-.318.17.022.348.037.526.037 3.781 0 6.85-2.8 6.85-6.252 0-3.453-3.069-6.251-6.85-6.251zm-1.87 2.805a.701.701 0 1 1 0-1.403.701.701 0 0 1 0 1.403zm-2.618 0a.701.701 0 1 1 0-1.403.701.701 0 0 1 0 1.403z"/>
+      </svg>
+      <div class="qr-dropdown">
+        <div class="qr-card">
+          <img src="/wechat-qr.jpg" alt="微信二维码" />
+          <p>扫一扫联系</p>
+          <span class="name">陈友恩</span>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<style>
+  .social-icons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .wechat-contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .wechat-trigger {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: var(--sl-color-gray-3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+
+  .wechat-trigger:hover {
+    color: var(--sl-color-text-accent);
+  }
+
+  .qr-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+  }
+
+  .wechat-contact:hover .qr-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .qr-card {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-hairline-light);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--sl-shadow-lg);
+    text-align: center;
+    width: 160px;
+  }
+
+  .qr-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  .qr-card p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-2);
+  }
+
+  .qr-card .name {
+    display: block;
+    font-weight: bold;
+    color: var(--sl-color-white);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+</style>
