@@ -1,0 +1,58 @@
+---
+title: GB/T 2423.10-2019 环境试验：振动 (正弦)
+sidebar:
+  badge:
+    text: 现行
+    variant: success
+---
+
+import { Tabs, TabItem, Aside, Steps } from '@astrojs/starlight/components';
+import TestCompare from '../../../../components/TestCompare.astro';
+
+## 1. 标准核心参数
+
+<Aside type="tip" title="核心逻辑">
+  该标准主要用于确定样品在承受规定严酷等级的正弦振动时的抗振能力或结构完好性。
+</Aside>
+
+| 参数名称 | 技术指标 | 备注 |
+| :--- | :--- | :--- |
+| 频率范围 | 10Hz - 2000Hz | 视产品类别而定 |
+| 振幅/加速度 | 10m/s² 或 0.75mm | 取两者切换点 |
+| 扫描速率 | 1 oct/min | 倍频程每分钟 |
+| 轴向 | X, Y, Z 三轴 | 每个轴向 10 次循环 |
+
+---
+
+## 2. 试验流程
+
+<Steps>
+1. **预处理**：样品在 25℃±10℃ 存放 24h。
+2. **初始检测**：确认外观、电气参数。
+3. **条件试验**：
+   - 寻找共振点 (Resonance Search)。
+   - 在共振点或规定频率进行耐久试验。
+4. **恢复与最后检测**：对比参数偏移量。
+</Steps>
+
+---
+
+## 3. 典型案例分析
+
+<TestCompare 
+  title="某车载控制器支架 - 振动疲劳测试"
+  beforeSrc="/assets/unnamed.webp" 
+  afterSrc="/assets/unnamed.webp"
+  beforeLabel="试验前：结构完好"
+  afterLabel="试验后：焊缝裂纹"
+/>
+
+<Aside type="caution">
+  **判定难点**：如果样品在试验中发生间歇性功能中断，但在静止后恢复，通常判定为 B 类失效，需检查连接器端子退针情况。
+</Aside>
+
+---
+
+## 4. 实验室能力与夹具建议
+- **设备选择**：推荐推力大于 1.2 倍载荷的电动振动台。
+- **夹具要求**：夹具一阶共振频率应高于试验上限频率的 1.2 倍。

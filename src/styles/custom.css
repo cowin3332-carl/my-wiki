@@ -1,50 +1,60 @@
-/* --- 全局定义：科技深蓝配色方案 --- */
+/* --- 科技深蓝配色增强 --- */
 :root {
-  /* 定义你的核心品牌色值 */
-  --brand-blue-dark: #002b5e;  /* 深沉蓝 */
-  --brand-blue: #0056b3;       /* 标准蓝 */
-  --brand-blue-light: #3385ff; /* 明亮蓝 */
-
-  /* 默认情况下的强调色（通常应用于深色模式）
-    将 Starlight 的默认强调色变量映射到我们的品牌色
-  */
-  --sl-color-accent-low: var(--brand-blue-dark);
+  --brand-blue: #0056b3;
   --sl-color-accent: var(--brand-blue);
-  --sl-color-accent-high: var(--brand-blue-light);
-
-  /* 如果你想微调深色模式的背景（可选） */
-  /* --sl-color-bg: #050b15; */
 }
 
-/* --- 关键修改：强制白天模式也统一使用深蓝风格 --- */
-/* 针对明确切换到浅色模式，或系统默认为浅色的情况 */
-:root[data-theme='light'],
-:root:not([data-theme='dark']) {
-  /* 强制覆盖浅色模式下的强调色变量。
-    让链接、按钮等元素在白天也显示为深蓝色，而不是默认的浅紫色。
-  */
-  --sl-color-accent-low: var(--brand-blue);      /* 在浅色背景上，用标准蓝替代深沉蓝，对比度更好 */
-  --sl-color-accent: var(--brand-blue);          /* 核心强调色保持不变 */
-  --sl-color-accent-high: var(--brand-blue-dark);/* 高亮色用深色，增加点击时的稳重感 */
-  
-  /* 可选：微调浅色模式的背景色，让它不是刺眼的纯白，
-    带一点点极淡的蓝灰冷色调，更显专业。
-  */
-  /* --sl-color-bg: #f8faff; */
+/* 1. 表格优化：实验室报告风格 */
+table {
+  width: 100%;
+  display: table;
+  border-radius: 8px;
+  overflow: hidden;
+  font-variant-numeric: tabular-nums; /* 数字等宽，方便对比参数 */
+  font-size: 0.95rem;
 }
 
-/* --- 其他样式微调 --- */
-
-/* 让首页卡片标题在任何模式下都更醒目 */
-.card .title {
-  color: var(--sl-color-accent) !important;
-  font-weight: 600;
+table th {
+  background-color: var(--sl-color-blue-low) !important;
+  color: var(--sl-color-accent-high) !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid var(--sl-color-accent) !important;
 }
 
-/* 调整 Hero 区域标题的颜色，让它更具科技感 */
-.hero h1 {
-  background: -webkit-linear-gradient(315deg, var(--brand-blue-light) 25%, var(--sl-color-white));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+table tr:nth-child(even) {
+  background-color: rgba(var(--sl-color-gray-6-rgb), 0.2);
+}
+
+/* 2. 侧边栏优化：强化分组感 */
+.sidebar-content .group-label {
+  font-weight: 800 !important;
+  color: var(--sl-color-white) !important;
+  letter-spacing: 0.05rem;
+  padding-top: 1rem !important;
+  border-top: 1px solid var(--sl-color-hairline);
+  margin-top: 1rem !important;
+}
+
+/* 3. Aside 提示框增强：显眼但不刺眼 */
+.starlight-aside {
+  border-left-width: 6px !important;
+  border-radius: 4px 12px 12px 4px !important;
+}
+
+/* 4. 图片阴影与圆角：展示设备照片更专业 */
+article img {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--sl-color-hairline);
+  margin: 1.5rem 0;
+}
+
+/* 5. 导航栏自定义图标微调 */
+.wechat-trigger svg {
+  transition: transform 0.3s ease;
+}
+.wechat-trigger:hover svg {
+  transform: scale(1.1);
+  color: #07c160; /* 微信绿 */
 }

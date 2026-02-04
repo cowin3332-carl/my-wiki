@@ -1,0 +1,66 @@
+---
+interface Props {
+  beforeSrc: string;
+  afterSrc: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+  title?: string;
+}
+
+const { 
+  beforeSrc, 
+  afterSrc, 
+  beforeLabel = "试验前", 
+  afterLabel = "试验后", 
+  title 
+} = Astro.props;
+---
+
+<div class="compare-container">
+  {title && <p class="compare-title">{title}</p>}
+  <div class="compare-grid">
+    <div class="compare-item">
+      <img src={beforeSrc} alt={beforeLabel} />
+      <span>{beforeLabel}</span>
+    </div>
+    <div class="compare-item">
+      <img src={afterSrc} alt={afterLabel} />
+      <span>{afterLabel}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .compare-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--sl-color-bg-nav);
+    border-radius: 16px;
+    border: 1px solid var(--sl-color-hairline);
+  }
+  .compare-title {
+    text-align: center;
+    font-weight: bold;
+    color: var(--sl-color-accent-high);
+    margin-bottom: 1rem !important;
+  }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .compare-item {
+    text-align: center;
+  }
+  .compare-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 0 0.5rem 0 !important;
+  }
+  .compare-item span {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    font-weight: bold;
+  }
+</style>
