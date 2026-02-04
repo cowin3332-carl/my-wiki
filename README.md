@@ -1,49 +1,60 @@
-# Starlight Starter Kit: Basics
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+---
 
-```
-pnpm create astro@latest -- --template starlight
-```
+# 🛡️ 环境可靠性技术知识库 (Reliability Hub)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> **“在极端中验证品质，在数据中洞察寿命。”**
 
-## 🚀 Project Structure
+本仓库是一个专注于**环境可靠性（Environmental Reliability）**的综合性知识集成平台。我们致力于打破标准条文与工程实践之间的鸿沟，为硬件工程师、质量专家及可靠性测试人员提供一站式的技术支持。
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+---
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+## 🏗️ 核心板块
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### 📖 标准深度解读 (Standard Interpretation)
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+我们不仅仅是搬运标准，更是解析标准背后的“为什么”。
 
-Static assets, like favicons, can be placed in the `public/` directory.
+* **通用标准库**：涵盖 **GB/T 2423**、**IEC 60068**、**MIL-STD-810** 等核心标准。
+* **行业差异化对比**：例如汽车行业 **AEC-Q100** 与 工业级标准在温度循环（TC）要求上的本质区别。
+* **测试条件选择指南**：如何根据产品的实际场景（如户外、机舱、沙漠）选择最合理的严酷等级。
 
-## 🧞 Commands
+### 🔬 实战案例研究 (Case Studies)
 
-All commands are run from the root of the project, from a terminal:
+从失败中学习是提高可靠性最快的方式。
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+* **失效分析 (FA)**：针对盐雾腐蚀、焊点疲劳、塑胶脆化等典型失效模式的深度剖析。
+* **改进策略**：展示从“测试失败”到“结构优化”再到“复测通过”的完整闭环。
+* **各行业样板**：涵盖消费电子、动力电池、医疗器械等细分领域的可靠性方案。
 
-## 👀 Want to learn more?
+### 🛠️ 技术方法论 (Methodology)
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+* **加速寿命试验 (ALT)**：如何通过高应力缩短测试周期，并科学推算产品寿命。
+* **失效物理 (PoF)**：从微观物理层面解释环境应力如何导致材料退化。
+* **DFR (Design for Reliability)**：如何在设计阶段就植入可靠性基因。
+
+---
+
+## 📊 测试类别一览
+
+| 环境应力 | 常见测试项 | 核心标准示例 |
+| --- | --- | --- |
+| **气候应力** | 高低温存储/运行、湿热、温度循环 | GB/T 2423.1/2 |
+| **机械应力** | 随机振动、机械冲击、跌落测试 | IEC 60068-2-64 |
+| **化学/特殊应力** | 盐雾腐蚀、紫外老化、气体腐蚀 | ISO 9227 / GB 2423.17 |
+| **综合应力** | 三综合测试 (温/湿/振) | MIL-STD-810H |
+
+---
+
+## 🎯 为什么关注我们？
+
+* **从理论到工程**：拒绝生搬硬套说明书，提供具有可操作性的测试参数设置建议。
+* **持续更新**：跟踪国际标准的最新改版（如 ISO 16750 的最新趋势）。
+* **社区共建**：欢迎各界工程师提交匿名化的失效案例，共同完善可靠性数据库。
+
+---
+
+> [!TIP]
+> **“可靠性不是测出来的，而是设计出来的。”** > 我们的目标是帮助每一位工程师在产品落地前，预见并消除 99% 的环境隐患。
+
+---
