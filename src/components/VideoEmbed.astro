@@ -1,0 +1,34 @@
+---
+// src/components/VideoEmbed.astro
+const { src, title = 'Embedded video' } = Astro.props;
+---
+<div class="video-embed-container">
+  <iframe
+    src={src}
+    title={title}
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<style>
+  .video-embed-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio for responsive video */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem; /* Adds some space below the video */
+    border-radius: 0.5rem; /* Optional: Adds rounded corners */
+  }
+
+  .video-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Removes default iframe border */
+  }
+</style>
