@@ -17,13 +17,11 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '🧪 试验项目',
-					items: [
-            { label: '试验项目概览', link: '/试验项目/试验项目概览' },
-            {
-              label: '气候环境试验',
-              autogenerate: { directory: '试验项目', collapsed: true },
-            },
-          ]
+					autogenerate: { directory: '试验项目' }
+				},
+				{
+					label: '📂 试验案例',
+					autogenerate: { directory: '试验案例' }
 				},
 				{
 					label: '📚标准解读',
