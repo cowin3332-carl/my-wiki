@@ -5,10 +5,10 @@ template: splash
 hero:
   tagline: 严谨、科学、数字化的检测技术总部。涵盖各类环境试验标准解读及原文查询。
   image:
-    file: ../../assets/images/backup-image.webp 
+    file: ../../assets/images/backup-image.webp
   actions:
-    - text: 开始标准解读
-      link: /标准解读/旭博认证cnas标准解读
+    - text: 试验项目
+      link: /试验项目/试验项目概览
       icon: right-arrow
     - text: 查阅标准原文
       link: /标准原文/标准原文
@@ -21,9 +21,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## 核心资源
 
 <CardGrid stagger>
+    <Card title="🧪 试验项目总览" icon="settings">
+        汇总环境可靠性常规试验项目，涵盖气候环境、机械环境、化学及特殊环境等测试类别。
+        [进入试验项目](/试验项目/试验项目概览)
+    </Card>
     <Card title="检测标准解读" icon="open-book">
         按行业领域（军工、轨交、汽车等）分类解读认可的检测能力范围标准，帮助您快速定位适用标准。
-        [点击阅读指南](/标准解读/旭博认证cnas标准解读)
+        [点击阅读指南](/标准解读/检测标准解读指南)
     </Card>
     <Card title="标准原文列表" icon="document">
         收录了 99 个认可的检测能力标准原文代码与详细描述，支持快速检索。
@@ -47,7 +51,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
         针对复杂的标准应用或特定的检测需求，我们的技术专家提供一对一的合规性评估建议。
         [联系技术支持](/服务/在线咨询)
     </Card>
-    
+
     <Card title="下载中心" icon="down-arrow">
         提供最新检测能力范围表、申请书模板及行业合规性白皮书的免费下载。
         [进入资源库](/参考资源/下载中心)

@@ -16,9 +16,19 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cowin3332-carl/my-wiki.git' }],
 			sidebar: [
 				{
+					label: '🧪 试验项目',
+					items: [
+            { label: '试验项目概览', link: '/试验项目/试验项目概览' },
+            {
+              label: '气候环境试验',
+              autogenerate: { directory: '试验项目', collapsed: true },
+            },
+          ]
+				},
+				{
 					label: '📚标准解读',
 					items: [
-            { label: '📌 核心标准总览', link: '/标准解读/旭博认证cnas标准解读' },
+            { label: '📌 核心标准总览', link: '/标准解读/检测标准解读指南' },
             {
               label: '🚗 汽车电子 (ISO/QC)',
               autogenerate: { directory: '标准解读', collapsed: true },
@@ -43,7 +53,7 @@ export default defineConfig({
           label: '公司信息',
           items: [
             { label: '资质概况', link: '/公司信息/资质概况' },
-            { label: '2026春节放假安排', link: '/公司信息/2026春节放假安排' },
+            { label: '2026 春节放假安排', link: '/公司信息/2026 春节放假安排' },
           ],
         },
         {
