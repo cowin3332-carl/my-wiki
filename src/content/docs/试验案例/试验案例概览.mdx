@@ -1,34 +1,80 @@
 ---
-title: 试验案例 TEST CASE
-description: 旭博检测环境可靠性试验真实案例展示
+title: 试验案例展示
+description: 旭博检测环境可靠性试验真实案例展示 - 覆盖航天、卫星及军工产品
 sidebar:
   order: 1
 ---
 
-# 试验案例展示
+import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
 
-以下为旭博检测在各类产品上开展的真实试验案例，涵盖航天产品、卫星及其他高精尖设备的可靠性验证过程：
+# 📂 真实试验案例展示
 
-### 航天及卫星类试验
-- 航天产品大量级(70G)振动试验
-- 卫星振动试验
-- 航天产品冲击响应谱试验
-- 航天产品加速度试验
-- 航天产品热真空试验
-- 航天产品低气压试验
-- 航天产品可靠性增长试验
+以下为旭博检测在各类高精尖设备上开展的真实试验案例。我们严格按照 GJB 150A 等标准执行，确保测试数据的科学性与严谨性。
 
-### 特殊气候环境试验
-- 国军标淋雨试验
-- 国军标砂尘试验
-- 国军标霉菌试验
-- 国军标盐雾试验(步入式)
-- 全光谱阳光模拟试验(步入式)
+---
 
-### 专项定制服务
-- 客户试验方案、大纲编制
-- 工装设计制造
-- 实车数据采集、处理、分析、故障复现
+<Tabs>
+  <TabItem label="气候环境案例" icon="sun">
+    <CardGrid>
+      <Card title="热真空试验" icon="starlight">
+        航天器在真空环境下的温度适应性验证
+      </Card>
+      <Card title="步入式盐雾试验" icon="water">
+        大型方舱及通信设备的耐腐蚀性能测试
+      </Card>
+      <Card title="全光谱阳光模拟" icon="sun">
+        户外机柜及车载设备的太阳辐射适应性
+      </Card>
+      <Card title="低气压试验" icon="bars">
+        高海拔环境下电子设备的散热与密封验证
+      </Card>
+    </CardGrid>
+  </TabItem>
 
-> [!NOTE]
-> 试验案例涉及现场涉密设备及测试图片，如果您想了解更详细的技术参数或查看具体图片，请通过【服务】-【在线咨询】与我们取得联系。
+  <TabItem label="力学环境案例" icon="setting">
+    <CardGrid>
+      <Card title="大量级振动试验" icon="random">
+        航天产品 **70G** 极端振动量级考核
+      </Card>
+      <Card title="冲击响应谱 (SRS)" icon="warning">
+        爆炸分离及强冲击环境下的结构完整性验证
+      </Card>
+      <Card title="加速度试验" icon="rocket">
+        模拟导弹及航空器高过载飞行状态
+      </Card>
+      <Card title="卫星整机振动" icon="starlight">
+        卫星发射阶段的力学环境模拟测试
+      </Card>
+    </CardGrid>
+  </TabItem>
+
+  <TabItem label="特殊/定制案例" icon="puzzle">
+    <CardGrid>
+      <Card title="霉菌试验案例" icon="warning">
+        湿热多雨地区军用物资的抗生物侵蚀测试
+      </Card>
+      <Card title="实车数据采集" icon="laptop">
+        针对汽车电子的故障复现与工况数据处理
+      </Card>
+      <Card title="工装设计制造" icon="add-document">
+        为复杂异形件定制高强度专用试验工装
+      </Card>
+      <Card title="大纲编制服务" icon="document">
+        多项国家重大工程项目的试验大纲技术咨询
+      </Card>
+    </CardGrid>
+  </TabItem>
+</Tabs>
+
+---
+
+> [!IMPORTANT]
+> **保密说明**：由于试验案例涉及航天、卫星等涉密设备，网页仅展示通用流程与概况。如需查看具体测试曲线、报告样本或现场图片，请通过【服务】-【在线咨询】联系我们的技术专家。
+
+---
+
+## 🛠️ 为什么选择旭博检测？
+
+- **资质齐全**：拥有 CNAS / CMA 实验室双重认可资质。
+- **设备领先**：配置有 16 吨推力振动台、大型步入式环境箱。
+- **技术沉淀**：核心团队拥有 10 年以上航天领域试验经验。
