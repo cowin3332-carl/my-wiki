@@ -1,15 +1,15 @@
 ---
-title: 试验项目概览
-description: 环境可靠性常规试验项目总览 - 涵盖 GJB 150A 全系列 28 项试验
+title: 试验项目全景总览
+description: 旭博检测环境可靠性试验能力全矩阵 - 涵盖 GJB 150A、GB/T 2423 等核心标准
 sidebar:
   order: 1
 ---
 
-import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid, Tabs, TabItem, Badge } from '@astrojs/starlight/components';
 
-# 🧪 试验项目全景总览
+# 🧪 试验能力全景总览
 
-本页面汇总了环境可靠性检测中的常规试验项目，重点涵盖 **GJB 150A (国军标)** 全系列 28 项试验。我们根据物理应力性质将其分为四大核心类别。
+旭博检测致力于提供最严谨、最数字化的环境可靠性测试服务。本页面汇集了从 **GJB 150A (军标)** 全系列到 **可靠性与动力学分析** 的全矩阵能力。
 
 ---
 
@@ -17,48 +17,49 @@ import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
   <TabItem label="气候环境试验" icon="sun">
     <CardGrid>
       <Card title="高温试验" icon="sun">
-        GJB 150.3A / GB/T 2423.2
-        [查看详情](/试验项目/气候环境试验/高温试验)
+        <Badge text="GJB 150.3A" variant="note" /> <Badge text="GB/T 2423.2" variant="success" />
+        评估产品在极端高温环境下的存储稳定性与运行可靠性。
+        [查看详情 →](/试验项目/气候环境试验/高温试验)
       </Card>
       <Card title="低温试验" icon="moon">
-        GJB 150.4A / GB/T 2423.1
-        [查看详情](/试验项目/气候环境试验/低温试验)
+        <Badge text="GJB 150.4A" variant="note" /> <Badge text="GB/T 2423.1" variant="success" />
+        验证产品在低温存储、冷启动及材料低温脆化方面的表现。
+        [查看详情 →](/试验项目/气候环境试验/低温试验)
       </Card>
       <Card title="温度冲击试验" icon="random">
-        GJB 150.5A / GB/T 2423.22
-        [查看详情](/试验项目/气候环境试验/温度冲击试验)
+        <Badge text="GJB 150.5A" variant="note" /> <Badge text="GB/T 2423.22" variant="success" />
+        通过提篮式冷热快速切换，发现材料热胀冷缩引起的结构应力缺陷。
+        [查看详情 →](/试验项目/气候环境试验/温度冲击试验)
       </Card>
       <Card title="湿热试验" icon="water">
-        GJB 150.9A / GB/T 2423.3
-        [查看详情](/试验项目/气候环境试验/湿热试验)
+        <Badge text="GJB 150.9A" variant="note" /> <Badge text="GB/T 2423.3" variant="success" />
+        模拟热带及高湿环境，评估绝缘性能下降及吸湿膨胀风险。
+        [查看详情 →](/试验项目/气候环境试验/湿热试验)
       </Card>
-      <Card title="低气压（高度）试验" icon="bars">
-        GJB 150.2A / GB/T 2423.21
-        [查看详情](/试验项目/气候环境试验/低气压试验)
+      <Card title="低气压（高度）" icon="bars">
+        <Badge text="GJB 150.2A" variant="note" /> <Badge text="高海拔" variant="tip" />
+        模拟高海拔环境，评估散热效率下降及电气击穿风险。
+        [查看详情 →](/试验项目/气候环境试验/低气压试验)
       </Card>
       <Card title="太阳辐射试验" icon="warning">
-        GJB 150.7A / GB/T 2423.24
-        [查看详情](/试验项目/气候环境试验/太阳辐射试验)
+        <Badge text="GJB 150.7A" variant="note" /> <Badge text="户外暴露" variant="tip" />
+        模拟全光谱阳光照射，评估材料老化、褪色及光热平衡效应。
+        [查看详情 →](/试验项目/气候环境试验/太阳辐射试验)
       </Card>
       <Card title="淋雨试验" icon="external-link">
-        GJB 150.8A / GB/T 2423.38
-        [查看详情](/试验项目/气候环境试验/淋雨试验)
+        <Badge text="GJB 150.8A" variant="note" /> <Badge text="IPX1-X9K" variant="success" />
+        全自动淋雨房，验证产品在恶劣雨水环境下的外壳防护等级。
+        [查看详情 →](/试验项目/气候环境试验/淋雨试验)
       </Card>
       <Card title="砂尘试验" icon="list-format">
-        GJB 150.12A / GB/T 2423.37
-        [查看详情](/试验项目/气候环境试验/砂尘试验)
+        <Badge text="GJB 150.12A" variant="note" /> <Badge text="防尘等级" variant="success" />
+        验证产品在风沙、扬尘环境下的密封可靠性与机械磨损。
+        [查看详情 →](/试验项目/气候环境试验/砂尘试验)
       </Card>
-      <Card title="浸渍试验" icon="down-arrow">
-        GJB 150.14A / GB/T 2423.15
-        [查看详情](/试验项目/气候环境试验/浸渍试验)
-      </Card>
-      <Card title="积冰/冻雨试验" icon="starlight">
-        GJB 150.22A
-        [查看详情](/试验项目/气候环境试验/积冰冻雨试验)
-      </Card>
-      <Card title="风压试验" icon="rocket">
-        GJB 150.21A
-        [查看详情](/试验项目/气候环境试验/风压试验)
+      <Card title="特殊气候环境" icon="starlight">
+        <Badge text="浸渍" variant="note" /> <Badge text="积冰冻雨" variant="note" /> <Badge text="风压" variant="note" />
+        涵盖 GJB 150.14A/21A/22A 等特种气候环境模拟能力。
+        [积冰详情](/试验项目/气候环境试验/积冰冻雨试验) | [风压详情](/试验项目/气候环境试验/风压试验)
       </Card>
     </CardGrid>
   </TabItem>
@@ -66,128 +67,119 @@ import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
   <TabItem label="力学环境试验" icon="setting">
     <CardGrid>
       <Card title="振动试验" icon="random">
-        GJB 150.16A / GB/T 2423.10
-        [查看详情](/试验项目/力学环境试验/正弦振动试验)
+        <Badge text="GJB 150.16A" variant="note" /> <Badge text="随机/正弦" variant="success" />
+        提供 16 吨大推力振动台，覆盖运输随机、扫频及特种谱模拟。
+        [查看详情 →](/试验项目/力学环境试验/正弦振动试验)
       </Card>
-      <Card title="冲击试验" icon="warning">
-        GJB 150.18A / GB/T 2423.5
-        [查看详情](/试验项目/力学环境试验/机械冲击试验)
+      <Card title="机械冲击试验" icon="warning">
+        <Badge text="GJB 150.18A" variant="note" /> <Badge text="经典冲击" variant="success" />
+        模拟跌落、碰撞等瞬态大加速度环境，评估结构完整性。
+        [查看详情 →](/试验项目/力学环境试验/机械冲击试验)
       </Card>
       <Card title="加速度试验" icon="rocket">
-        GJB 150.15A / GB/T 2423.15
-        [查看详情](/试验项目/力学环境试验/加速度试验)
+        <Badge text="GJB 150.15A" variant="note" /> <Badge text="离心机" variant="tip" />
+        通过精密离心机模拟飞机机动、转向产生的稳态过载。
+        [查看详情 →](/试验项目/力学环境试验/加速度试验)
       </Card>
       <Card title="噪声试验" icon="comment">
-        GJB 150.17A
-        [查看详情](/试验项目/力学环境试验/噪声试验)
+        <Badge text="GJB 150.17A" variant="note" /> <Badge text="高分贝" variant="tip" />
+        模拟喷气发动机近场噪声对轻质薄板结构的影响。
+        [查看详情 →](/试验项目/力学环境试验/噪声试验)
       </Card>
-      <Card title="炮击振动试验" icon="warning">
-        GJB 150.20A
-        [查看详情](/试验项目/力学环境试验/炮击振动试验)
+      <Card title="炮击/弹道冲击" icon="danger">
+        <Badge text="GJB 150.20A" variant="danger" /> <Badge text="火工冲击" variant="danger" />
+        针对武器发射、爆炸分离等极端力学工况的瞬态脉冲模拟。
+        [炮击详情](/试验项目/力学环境试验/炮击振动试验) | [弹道详情](/试验项目/力学环境试验/弹道冲击试验)
       </Card>
-      <Card title="爆炸分离冲击试验" icon="danger">
-        GJB 150.27A
-        [查看详情](/试验项目/力学环境试验/爆炸分离冲击试验)
-      </Card>
-      <Card title="弹道冲击试验" icon="danger">
-        GJB 150.29A
-        [查看详情](/试验项目/力学环境试验/弹道冲击试验)
-      </Card>
-      <Card title="倾斜和摇摆试验" icon="random">
-        GJB 150.23A
-        [查看详情](/试验项目/力学环境试验/倾斜摇摆试验)
-      </Card>
-      <Card title="跌落试验" icon="down-arrow">
-        GB/T 2423.8 / IEC 60068-2-32
-        [查看详情](/试验项目/力学环境试验/跌落试验)
+      <Card title="倾斜与跌落" icon="down-arrow">
+        <Badge text="GJB 150.23A" variant="note" /> <Badge text="搬运跌落" variant="success" />
+        模拟舰船动态环境下的姿态适应性及装卸跌落风险。
+        [跌落详情](/试验项目/力学环境试验/跌落试验) | [摇摆详情](/试验项目/力学环境试验/倾斜摇摆试验)
       </Card>
     </CardGrid>
   </TabItem>
 
-  <TabItem label="化学及生物环境" icon="flask">
+  <TabItem label="化学环境试验" icon="flask">
     <CardGrid>
-      <Card title="盐雾试验" icon="water">
-        GJB 150.11A / GB/T 2423.17
-        [查看详情](/试验项目/化学环境试验/盐雾试验)
+      <Card title="盐雾腐蚀试验" icon="water">
+        <Badge text="GJB 150.11A" variant="note" /> <Badge text="中性/酸性" variant="success" />
+        步入式盐雾箱，支持整机及大型方舱的耐盐雾腐蚀能力评估。
+        [查看详情 →](/试验项目/化学环境试验/盐雾试验)
       </Card>
       <Card title="霉菌试验" icon="warning">
-        GJB 150.10A / GB/T 2423.16
-        [查看详情](/试验项目/化学环境试验/霉菌试验)
+        <Badge text="GJB 150.10A" variant="note" /> <Badge text="生物侵蚀" variant="tip" />
+        模拟湿热环境下的真菌生长，评估材料降解及电路短路风险。
+        [查看详情 →](/试验项目/化学环境试验/霉菌试验)
       </Card>
-      <Card title="流体污染试验" icon="water">
-        GJB 150.26A
-        [查看详情](/试验项目/化学环境试验/流体污染试验)
+      <Card title="流体污染试验" icon="down-arrow">
+        <Badge text="GJB 150.26A" variant="note" /> <Badge text="耐油测试" variant="tip" />
+        测试材料在接触航空燃油、液压油等流体后的理化稳定性。
+        [查看详情 →](/试验项目/化学环境试验/流体污染试验)
       </Card>
-      <Card title="酸性大气试验" icon="warning">
-        GJB 150.28A
-        [查看详情](/试验项目/化学环境试验/酸性大气试验)
-      </Card>
-      <Card title="气体腐蚀试验" icon="warning">
-        GB/T 2423.19
-        [查看详情](/试验项目/气候环境试验/气体腐蚀试验)
+      <Card title="酸性大气试验" icon="flask">
+        <Badge text="GJB 150.28A" variant="note" /> <Badge text="工业腐蚀" variant="tip" />
+        评估工业大气、酸性大气环境对精密电子连接器的腐蚀影响。
+        [查看详情 →](/试验项目/化学环境试验/酸性大气试验)
       </Card>
     </CardGrid>
   </TabItem>
 
-  <TabItem label="综合及特殊环境" icon="puzzle">
+  <TabItem label="综合环境试验" icon="puzzle">
     <CardGrid>
-      <Card title="温度-湿度-振动-高度" icon="laptop">
-        GJB 150.24A (四综合)
-        [查看详情](/试验项目/综合环境试验/四综合试验)
+      <Card title="四综合/三综合" icon="laptop">
+        <Badge text="GJB 150.24A" variant="note" /> <Badge text="多应力" variant="danger" />
+        模拟温/湿/振/高同步作用，最真实地复现任务剖面环境。
+        [四综合详情](/试验项目/综合环境试验/四综合试验) | [三综合详情](/试验项目/综合环境试验/三综合试验)
       </Card>
-      <Card title="振动-噪声-温度" icon="laptop">
-        GJB 150.25A
-        [查看详情](/试验项目/综合环境试验/三综合试验)
+      <Card title="爆炸性大气" icon="danger">
+        <Badge text="GJB 150.13A" variant="note" /> <Badge text="本质安全" variant="success" />
+        验证设备在易燃易爆混合气体环境中的工作安全性。
+        [查看详情 →](/试验项目/综合环境试验/爆炸性大气试验)
       </Card>
-      <Card title="爆炸性大气试验" icon="danger">
-        GJB 150.13A
-        [查看详情](/试验项目/综合环境试验/爆炸性大气试验)
-      </Card>
-      <Card title="真空太阳辐射试验" icon="sun">
-        GJB 150.30A
-        [查看详情](/试验项目/综合环境试验/真空太阳辐射试验)
-      </Card>
-      <Card title="通用要求 (Part 1)" icon="document">
-        GJB 150.1A
-        [查看详情](/试验项目/试验项目概览)
+      <Card title="真空太阳辐射" icon="sun">
+        <Badge text="GJB 150.30A" variant="note" /> <Badge text="空间环境" variant="tip" />
+        模拟地外真空、高低温及强太阳辐射对航天器的影响。
+        [查看详情 →](/试验项目/综合环境试验/真空太阳辐射试验)
       </Card>
     </CardGrid>
   </TabItem>
 
   <TabItem label="可靠性试验" icon="star">
     <CardGrid>
-      <Card title="环境应力筛选 (ESS)" icon="random">
-        GJB 1032A / MIL-HDBK-344
-        [查看详情](/试验项目/可靠性试验/环境应力筛选)
+      <Card title="环境应力筛选" icon="random">
+        <Badge text="GJB 1032A" variant="success" /> <Badge text="ESS" variant="tip" />
+        通过快速温变与随机振动，剔除批产阶段的早期故障。
+        [查看详情 →](/试验项目/可靠性试验/环境应力筛选)
       </Card>
-      <Card title="高加速寿命试验 (HALT)" icon="rocket">
-        加速暴露设计缺陷
-        [查看详情](/试验项目/可靠性试验/高加速寿命试验)
+      <Card title="加速寿命试验" icon="rocket">
+        <Badge text="HALT/HASS" variant="success" /> <Badge text="极速暴露" variant="danger" />
+        在研发阶段通过高加速应力快速发现设计弱点，提升固有可靠性。
+        [查看详情 →](/试验项目/可靠性试验/高加速寿命试验)
       </Card>
-      <Card title="高加速应力筛选 (HASS)" icon="warning">
-        生产阶段的快速筛选
-        [查看详情](/试验项目/可靠性试验/高加速应力筛选)
-      </Card>
-      <Card title="可靠性鉴定试验 (RQT)" icon="approve">
-        GJB 899A 可靠性验证
-        [查看详情](/试验项目/可靠性试验/可靠性鉴定试验)
+      <Card title="可靠性鉴定" icon="approve">
+        <Badge text="GJB 899A" variant="success" /> <Badge text="RQT" variant="tip" />
+        验证装备可靠性指标是否符合技术要求。
+        [查看详情 →](/试验项目/可靠性试验/可靠性鉴定试验)
       </Card>
     </CardGrid>
   </TabItem>
 
   <TabItem label="模态分析" icon="bars">
     <CardGrid>
-      <Card title="试验模态分析 (EMA)" icon="random">
-        获取结构固有频率与振型
-        [查看详情](/试验项目/模态分析/试验模态分析)
+      <Card title="试验模态分析" icon="random">
+        <Badge text="EMA" variant="success" /> <Badge text="人工激励" variant="tip" />
+        通过力锤或激振器识别结构的固有频率、阻尼比及振型。
+        [查看详情 →](/试验项目/模态分析/试验模态分析)
       </Card>
-      <Card title="工作模态分析 (OMA)" icon="setting">
-        真实工作载荷下的模态识别
-        [查看详情](/试验项目/模态分析/工作模态分析)
+      <Card title="工作模态分析" icon="setting">
+        <Badge text="OMA" variant="success" /> <Badge text="真实载荷" variant="tip" />
+        仅利用工作环境下的响应数据识别结构的动态特性。
+        [查看详情 →](/试验项目/模态分析/工作模态分析)
       </Card>
-      <Card title="频响函数测试 (FRF)" icon="line-chart">
-        传递函数与动态特性评估
-        [查看详情](/试验项目/模态分析/频响函数测试)
+      <Card title="频响函数测试" icon="line-chart">
+        <Badge text="FRF" variant="success" /> <Badge text="传递特性" variant="tip" />
+        分析能量在结构中的传播路径及动态增益。
+        [查看详情 →](/试验项目/模态分析/频响函数测试)
       </Card>
     </CardGrid>
   </TabItem>
@@ -195,16 +187,19 @@ import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
   <TabItem label="疲劳与强度" icon="open-book">
     <CardGrid>
       <Card title="静强度试验" icon="starlight">
-        考核结构承载能力极限
-        [查看详情](/试验项目/疲劳与强度试验/静强度试验)
+        <Badge text="极限载荷" variant="success" /> <Badge text="安全性" variant="tip" />
+        通过施加最大模拟载荷，考核结构在极限工况下的承载能力。
+        [查看详情 →](/试验项目/疲劳与强度试验/静强度试验)
       </Card>
       <Card title="疲劳寿命试验" icon="history">
-        评估循环载荷下的寿命损伤
-        [查看详情](/试验项目/疲劳与强度试验/疲劳寿命试验)
+        <Badge text="循环应力" variant="success" /> <Badge text="寿命预测" variant="tip" />
+        模拟产品服役期间的交变应力，评估结构疲劳损伤。
+        [查看详情 →](/试验项目/疲劳与强度试验/疲劳寿命试验)
       </Card>
       <Card title="应变测试" icon="pencil">
-        关键部位应力分布精确测量
-        [查看详情](/试验项目/疲劳与强度试验/应变测试)
+        <Badge text="应力分布" variant="success" /> <Badge text="精准测量" variant="tip" />
+        利用应变片实时记录结构表面的微小形变。
+        [查看详情 →](/试验项目/疲劳与强度试验/应变测试)
       </Card>
     </CardGrid>
   </TabItem>
@@ -212,14 +207,20 @@ import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
 
 ---
 
-## 🔍 如何选择试验项目？
+<Card title="🚀 一站式技术支持" icon="email">
+  旭博检测提供从**试验方案设计、工装定制、大纲编制到故障分析复现**的全流程技术支持。
+  [联系技术专家获取定制方案 →](/服务/在线咨询)
+</Card>
 
-选择试验项目时，应考虑以下因素：
+## 🔍 实验室资质与能力
 
-1. **产品使用环境** - 根据产品实际应用场景选择对应的环境应力
-2. **行业要求** - 不同行业（汽车、军工、轨道交通）有特定的测试要求
-3. **客户要求** - 满足客户技术协议中规定的测试条件
-4. **产品设计特点** - 根据产品材料、结构特点确定重点测试项目
+我们严格执行 **ISO/IEC 17025** 管理体系，确保报告的权威性。
+
+- **CNAS/CMA 认可能力**：涵盖军标、民航、车规及通标 500 余项。
+- **先进设备**：拥有 16 吨电磁振动台、30 立方步入式温湿箱、高低温真空罐等。
+- **专家团队**：核心技术人员深耕航天与军工可靠性领域 10 年以上。
+
+---
 
 > [!TIP]
-> 旭博检测提供专业的**试验大纲编制**服务，帮助您科学选择测试项目。
+> 建议在产品研发的**初样阶段**即引入环境可靠性评估，可降低 70% 以上的后期维护成本。

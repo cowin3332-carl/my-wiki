@@ -1,0 +1,73 @@
+---
+---
+<div class="card-carousel">
+  <div class="carousel-track">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .card-carousel {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0.5rem;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .card-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .carousel-track > :global(*) {
+    flex: 0 0 300px;
+    margin: 0 !important;
+  }
+
+  /* Add a subtle fade on edges to indicate scrolling */
+  .card-carousel {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+</style>
+
+<script>
+  // Optional: Add drag-to-scroll functionality
+  const carousels = document.querySelectorAll('.card-carousel');
+  carousels.forEach(carousel => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      carousel.classList.add('active');
+      // @ts-ignore
+      startX = e.pageX - carousel.offsetLeft;
+      // @ts-ignore
+      scrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+    carousel.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      // @ts-ignore
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2; 
+      // @ts-ignore
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
