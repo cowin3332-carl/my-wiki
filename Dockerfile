@@ -2,34 +2,42 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
-# 1. 安装基础依赖，解决alpine的SSL证书问题
-RUN apk add --no-cache ca-certificates curl
+# 1. 安装基础依赖
+# sharp 在 alpine 下可能需要 libc6-compat
+RUN apk add --no-cache ca-certificates curl libc6-compat
 
-# 2. 固定pnpm版本，和你本地完全一致，不要用latest！
+# 2. 固定 pnpm 版本
 RUN corepack enable && corepack prepare pnpm@10.33.2 --activate
 
-# 3. 【核心修复】强制配置国内源，解决GitHub Runner网络问题
-RUN pnpm config set registry https://registry.npmmirror.com && \
-    pnpm config set strict-peer-dependencies false && \
-    pnpm config set fetch-retries 5
-
-# 复制配置文件并安装依赖（失败自动重试3次）
+# 3. 复制配置文件并安装依赖
 COPY package.json pnpm-lock.yaml* ./
-RUN for i in 1 2 3; do \
-    pnpm install --frozen-lockfile && break; \
-    echo "第$i次安装失败，5秒后重试..."; \
-    sleep 5; \
-    done
+# 在 GitHub Runner 环境下，使用默认 registry 通常最快最稳定
+RUN pnpm install --frozen-lockfile
 
-# 复制源码并构建静态 HTML
+# 4. 复制源码并构建
 COPY . .
 RUN pnpm run build
 
 # --- 运行阶段 ---
 FROM nginx:mainline-alpine-slim
-# 优化Nginx配置，解决单页应用路由问题（可选但推荐）
-RUN sed -i 's/index  index.html index.htm;/try_files $uri $uri\/ \/index.html;/g' /etc/nginx/conf.d/default.conf
+
+# 优化 Nginx 配置以支持单页应用路由
+# 这种方式比 sed 更稳健
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html index.htm; \
+        try_files $uri $uri/ /index.html; \
+    } \
+    error_page 500 502 503 504 /50x.html; \
+    location = /50x.html { \
+        root /usr/share/nginx/html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
 # 将构建好的 dist 文件夹拷贝到 Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
