@@ -4,28 +4,28 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: '环境可靠性检测技术标准库',
-			customCss: [
+  integrations: [
+    starlight({
+      title: '环境可靠性检测技术标准库',
+      customCss: [
         './src/styles/custom.css',
       ],
       components: {
         SocialIcons: './src/components/SocialIcons.astro',
       },
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cowin3332-carl/my-wiki.git' }],
-			sidebar: [
-				{
-					label: '🧪 试验项目',
-					autogenerate: { directory: '试验项目' }
-				},
-				{
-					label: '📂 试验案例',
-					autogenerate: { directory: '试验案例' }
-				},
-				{
-					label: '📚标准解读',
-					items: [
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cowin3332-carl/my-wiki.git' }],
+      sidebar: [
+        {
+          label: '🧪 试验项目',
+          autogenerate: { directory: '试验项目' }
+        },
+        {
+          label: '📂 试验案例',
+          autogenerate: { directory: '试验案例' }
+        },
+        {
+          label: '📚标准解读',
+          items: [
             { label: '📌 核心标准总览', link: '/标准解读/检测标准解读指南' },
             {
               label: '🚗 汽车电子 (ISO/QC)',
@@ -40,18 +40,18 @@ export default defineConfig({
               autogenerate: { directory: '标准解读', collapsed: true },
             }
           ]
-				},
-				{
-					label: '📚 标准原文',
-					items: [
-						{ label: '标准原文列表', link: '/标准原文/标准原文' },
-					],
-				},
+        },
+        {
+          label: '📚 标准原文',
+          items: [
+            { label: '标准原文列表', link: '/标准原文/标准原文' },
+          ],
+        },
         {
           label: '公司信息',
           items: [
             { label: '资质概况', link: '/公司信息/资质概况' },
-            { label: '2026 春节放假安排', link: '/公司信息/2026 春节放假安排' },
+            { label: '2026 春节放假安排', link: '/公司信息/2026春节放假安排' },
           ],
         },
         {
@@ -72,7 +72,7 @@ export default defineConfig({
             { label: '下载中心', link: '/参考资源/下载中心' },
           ],
         },
-			],
-		}),
-	],
+      ],
+    }),
+  ],
 });
