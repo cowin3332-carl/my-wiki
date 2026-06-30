@@ -17,11 +17,11 @@ export default defineConfig({
       sidebar: [
         {
           label: '🧪 试验项目',
-          autogenerate: { directory: '试验项目' }
+          items: [{ autogenerate: { directory: '试验项目' } }]
         },
         {
           label: '📂 试验案例',
-          autogenerate: { directory: '试验案例' }
+          items: [{ autogenerate: { directory: '试验案例' } }]
         },
         {
           label: '📚标准解读',
@@ -29,15 +29,15 @@ export default defineConfig({
             { label: '📌 核心标准总览', link: '/标准解读/检测标准解读指南' },
             {
               label: '🚗 汽车电子 (ISO/QC)',
-              autogenerate: { directory: '标准解读', collapsed: true },
+              items: [{ autogenerate: { directory: '标准解读', collapsed: true } }],
             },
             {
               label: '🛡️ 军工/航空 (GJB/RTCA)',
-              autogenerate: { directory: '标准解读', collapsed: true },
+              items: [{ autogenerate: { directory: '标准解读', collapsed: true } }],
             },
             {
               label: '🚆 轨道交通 (IEC/EN)',
-              autogenerate: { directory: '标准解读', collapsed: true },
+              items: [{ autogenerate: { directory: '标准解读', collapsed: true } }],
             }
           ]
         },
